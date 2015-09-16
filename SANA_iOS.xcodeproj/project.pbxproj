@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A14757D91BAA20B1003C502C /* VCDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14757D71BAA20B1003C502C /* VCDetalle.swift */; };
+		A14757DA1BAA20B1003C502C /* ViewControllerListaPacientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */; };
 		E1EC289A1BAA1D5B00E19AD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC28991BAA1D5B00E19AD6 /* AppDelegate.swift */; };
 		E1EC289C1BAA1D5B00E19AD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC289B1BAA1D5B00E19AD6 /* ViewController.swift */; };
 		E1EC28A21BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1EC28A01BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A14757D71BAA20B1003C502C /* VCDetalle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDetalle.swift; sourceTree = "<group>"; };
+		A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerListaPacientes.swift; sourceTree = "<group>"; };
 		E1EC28961BAA1D5B00E19AD6 /* SANA_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SANA_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EC28991BAA1D5B00E19AD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EC289B1BAA1D5B00E19AD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				E1EC28AE1BAA1E6700E19AD6 /* VCPregunta.swift */,
 				E1EC28991BAA1D5B00E19AD6 /* AppDelegate.swift */,
 				E1EC289B1BAA1D5B00E19AD6 /* ViewController.swift */,
+				A14757D71BAA20B1003C502C /* VCDetalle.swift */,
+				A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */,
 				E1EC28B41BAA1FE400E19AD6 /* Main.storyboard */,
 				E1EC28A51BAA1D5B00E19AD6 /* LaunchScreen.storyboard */,
 				E1EC28A81BAA1D5B00E19AD6 /* Info.plist */,
@@ -142,6 +148,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1EC289C1BAA1D5B00E19AD6 /* ViewController.swift in Sources */,
+				A14757DA1BAA20B1003C502C /* ViewControllerListaPacientes.swift in Sources */,
+				A14757D91BAA20B1003C502C /* VCDetalle.swift in Sources */,
 				E1EC289A1BAA1D5B00E19AD6 /* AppDelegate.swift in Sources */,
 				E1EC28AF1BAA1E6700E19AD6 /* VCPregunta.swift in Sources */,
 				E1EC28A21BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld in Sources */,
@@ -286,6 +294,7 @@
 				E1EC28AD1BAA1D5B00E19AD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
