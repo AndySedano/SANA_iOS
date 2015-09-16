@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jfo-V1-ZNp">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SANA_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-PT-4Ue">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLb-do-oQW">
+                                <rect key="frame" x="35" y="264" width="530" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Nueva Consulta" backgroundImage="Boton_Menu"/>
+                                <connections>
+                                    <segue destination="Ggo-EN-lZY" kind="presentation" id="2oI-aX-k1i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-H4-hxo">
+                                <rect key="frame" x="35" y="372" width="530" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Lista Pacientes" backgroundImage="Boton_Menu"/>
+                                <connections>
+                                    <segue destination="tML-XQ-5kF" kind="show" id="ilN-89-5n4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X61-k9-uui">
+                                <rect key="frame" x="35" y="480" width="530" height="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Configuracion" backgroundImage="Boton_Menu"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sana_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bh5-Bv-hbB">
+                                <rect key="frame" x="238" y="72" width="124" height="44"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bh5-Bv-hbB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1yb-90-atn"/>
+                            <constraint firstItem="nBr-PT-4Ue" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2v7-wz-sOm"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nBr-PT-4Ue" secondAttribute="bottom" id="9gU-b4-wNz"/>
+                            <constraint firstItem="X61-k9-uui" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Cx9-lw-tqO"/>
+                            <constraint firstItem="nBr-PT-4Ue" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K30-ce-XJc"/>
+                            <constraint firstItem="s8e-H4-hxo" firstAttribute="top" secondItem="sLb-do-oQW" secondAttribute="bottom" constant="8" id="ZEd-lp-ZEQ"/>
+                            <constraint firstAttribute="trailing" secondItem="nBr-PT-4Ue" secondAttribute="trailing" id="a6w-Qj-kdz"/>
+                            <constraint firstItem="sLb-do-oQW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dXT-bb-QYH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="X61-k9-uui" secondAttribute="bottom" constant="20" id="fA4-dl-JL6"/>
+                            <constraint firstItem="bh5-Bv-hbB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="qhj-ds-HMD"/>
+                            <constraint firstItem="s8e-H4-hxo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="u5j-B1-fgv"/>
+                            <constraint firstItem="X61-k9-uui" firstAttribute="top" secondItem="s8e-H4-hxo" secondAttribute="bottom" constant="8" id="vbm-Yz-TSB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="EZY-mF-cYz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="pwK-Fn-GR8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jfo-V1-ZNp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iER-yS-dAi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="MCY-fd-lmS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mzU-l1-SEH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="349"/>
+        </scene>
+        <!--View Controller Lista Pacientes-->
+        <scene sceneID="ad9-Az-SUp">
+            <objects>
+                <tableViewController id="tML-XQ-5kF" customClass="ViewControllerListaPacientes" customModule="SANA_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4k0-U1-U1D">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vRp-mZ-BAT">
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vRp-mZ-BAT" id="hbO-ox-zuG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="SFt-Sw-vta" kind="show" id="cGV-wD-fdr"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="tML-XQ-5kF" id="KEc-Jd-NIx"/>
+                            <outlet property="delegate" destination="tML-XQ-5kF" id="BJY-N0-kGH"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="smH-Kd-DOh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773" y="349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Vub-Xc-gMI">
+            <objects>
+                <navigationController id="Ggo-EN-lZY" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NJZ-Lb-Y6i">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qJH-7d-st5" kind="relationship" relationship="rootViewController" id="mZg-Pa-nyx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Osd-xp-vLp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1057" y="-388"/>
+        </scene>
+        <!--Pregunta-->
+        <scene sceneID="unc-9Y-Y5W">
+            <objects>
+                <viewController id="qJH-7d-st5" customClass="VCPregunta" customModule="SANA_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NfT-gd-kMD"/>
+                        <viewControllerLayoutGuide type="bottom" id="FB3-nP-ceH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Xli-oA-sjT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29A-ce-vZj">
+                                <rect key="frame" x="268" y="285" width="64" height="30"/>
+                                <state key="normal" title="Siguiente"/>
+                                <connections>
+                                    <segue destination="PL3-cZ-Qnt" kind="show" id="Jfa-x9-AH8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9i-Eb-SBR">
+                                <rect key="frame" x="270" y="323" width="61" height="30"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="1" green="0.09044467206820106" blue="0.1056410796709859" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cerrar:" destination="qJH-7d-st5" eventType="touchUpInside" id="Rny-tC-6yM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="F9i-Eb-SBR" firstAttribute="centerX" secondItem="Xli-oA-sjT" secondAttribute="centerX" id="42a-hc-UbO"/>
+                            <constraint firstItem="29A-ce-vZj" firstAttribute="centerX" secondItem="Xli-oA-sjT" secondAttribute="centerX" id="4au-zH-rjt"/>
+                            <constraint firstItem="29A-ce-vZj" firstAttribute="centerY" secondItem="Xli-oA-sjT" secondAttribute="centerY" id="Fgi-LR-VTr"/>
+                            <constraint firstItem="F9i-Eb-SBR" firstAttribute="top" secondItem="29A-ce-vZj" secondAttribute="bottom" constant="8" id="YPo-bf-WKI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uJH-5q-fC0">
+                        <barButtonItem key="backBarButtonItem" title="Regresar" id="NCI-dW-OXI"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jRK-P5-h5z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1773" y="-388"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Faa-Od-KeU">
+            <objects>
+                <viewController id="SFt-Sw-vta" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cO0-jp-oAs"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z0K-ta-0G7"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BcU-zV-YZc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yW3-7h-062" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2501" y="349"/>
+        </scene>
+        <!--Pregunta-->
+        <scene sceneID="His-x5-G4p">
+            <objects>
+                <viewController id="OcN-HL-SHk" customClass="VCPregunta" customModule="SANA_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cl8-7n-Re9"/>
+                        <viewControllerLayoutGuide type="bottom" id="fQS-dk-eUg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0kB-JV-ODz">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xf5-Sg-fis">
+                                <rect key="frame" x="268" y="285" width="64" height="30"/>
+                                <state key="normal" title="Siguiente"/>
+                                <connections>
+                                    <segue destination="8DZ-vJ-FfU" kind="show" id="h4N-iV-IpR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52Q-f8-FMu">
+                                <rect key="frame" x="270" y="323" width="61" height="30"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="1" green="0.09044467206820106" blue="0.1056410796709859" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cerrar:" destination="OcN-HL-SHk" eventType="touchUpInside" id="p6y-wg-mrU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xf5-Sg-fis" firstAttribute="centerX" secondItem="0kB-JV-ODz" secondAttribute="centerX" id="EJJ-1c-23X"/>
+                            <constraint firstItem="52Q-f8-FMu" firstAttribute="centerX" secondItem="0kB-JV-ODz" secondAttribute="centerX" id="d2d-EI-isZ"/>
+                            <constraint firstItem="xf5-Sg-fis" firstAttribute="centerY" secondItem="0kB-JV-ODz" secondAttribute="centerY" id="jdO-D0-K9K"/>
+                            <constraint firstItem="52Q-f8-FMu" firstAttribute="top" secondItem="xf5-Sg-fis" secondAttribute="bottom" constant="8" id="n4J-V4-8r7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="663-c1-NcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3205" y="-388"/>
+        </scene>
+        <!--Pregunta-->
+        <scene sceneID="Mht-9s-lSX">
+            <objects>
+                <viewController id="i1C-dE-XQl" customClass="VCPregunta" customModule="SANA_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BQm-Gh-7NZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="YPV-wi-UJL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="HDu-cl-c5X">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4DC-3A-1Gq">
+                                <rect key="frame" x="270" y="285" width="61" height="30"/>
+                                <state key="normal" title="Terminar"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZGy-rc-CdM">
+                                <rect key="frame" x="270" y="323" width="61" height="30"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="1" green="0.090444672069999996" blue="0.1056410797" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cerrar:" destination="i1C-dE-XQl" eventType="touchUpInside" id="syG-49-FPO"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4DC-3A-1Gq" firstAttribute="centerX" secondItem="HDu-cl-c5X" secondAttribute="centerX" id="K8F-9R-OVm"/>
+                            <constraint firstItem="4DC-3A-1Gq" firstAttribute="centerY" secondItem="HDu-cl-c5X" secondAttribute="centerY" id="brB-DO-7te"/>
+                            <constraint firstItem="ZGy-rc-CdM" firstAttribute="top" secondItem="4DC-3A-1Gq" secondAttribute="bottom" constant="8" id="oDb-4N-0l8"/>
+                            <constraint firstItem="ZGy-rc-CdM" firstAttribute="centerX" secondItem="HDu-cl-c5X" secondAttribute="centerX" id="yMG-9M-TiY"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yst-i1-MAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4651" y="-388"/>
+        </scene>
+        <!--Pregunta-->
+        <scene sceneID="8HC-qg-8y6">
+            <objects>
+                <viewController id="8DZ-vJ-FfU" customClass="VCPregunta" customModule="SANA_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="riX-uy-pTu"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Se-1O-PYd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ACG-kK-kZI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W1d-y0-bXs">
+                                <rect key="frame" x="268" y="285" width="64" height="30"/>
+                                <state key="normal" title="Siguiente"/>
+                                <connections>
+                                    <segue destination="i1C-dE-XQl" kind="show" id="OC9-bK-hyt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TLG-hO-kk0">
+                                <rect key="frame" x="270" y="323" width="61" height="30"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="1" green="0.090444672069999996" blue="0.1056410797" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cerrar:" destination="8DZ-vJ-FfU" eventType="touchUpInside" id="hco-xJ-HoH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TLG-hO-kk0" firstAttribute="top" secondItem="W1d-y0-bXs" secondAttribute="bottom" constant="8" id="43N-kT-2Vl"/>
+                            <constraint firstItem="W1d-y0-bXs" firstAttribute="centerX" secondItem="ACG-kK-kZI" secondAttribute="centerX" id="O7A-7Y-xVI"/>
+                            <constraint firstItem="W1d-y0-bXs" firstAttribute="centerY" secondItem="ACG-kK-kZI" secondAttribute="centerY" id="tkG-A1-raI"/>
+                            <constraint firstItem="TLG-hO-kk0" firstAttribute="centerX" secondItem="ACG-kK-kZI" secondAttribute="centerX" id="zLf-9w-XKx"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dqw-L7-Eme" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3939" y="-388"/>
+        </scene>
+        <!--Pregunta-->
+        <scene sceneID="aMy-dH-Lcl">
+            <objects>
+                <viewController id="PL3-cZ-Qnt" customClass="VCPregunta" customModule="SANA_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xji-Vr-HYG"/>
+                        <viewControllerLayoutGuide type="bottom" id="NIg-Mo-s6t"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FO3-Gs-Zpe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMG-jn-s9h">
+                                <rect key="frame" x="268" y="285" width="64" height="30"/>
+                                <state key="normal" title="Siguiente"/>
+                                <connections>
+                                    <segue destination="OcN-HL-SHk" kind="show" id="iRq-Rf-dKJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f7q-dA-vAP">
+                                <rect key="frame" x="270" y="323" width="61" height="30"/>
+                                <state key="normal" title="Cancelar">
+                                    <color key="titleColor" red="1" green="0.09044467206820106" blue="0.1056410796709859" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cerrar:" destination="PL3-cZ-Qnt" eventType="touchUpInside" id="cpo-eD-OB5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lMG-jn-s9h" firstAttribute="centerX" secondItem="FO3-Gs-Zpe" secondAttribute="centerX" id="Jo3-MH-fof"/>
+                            <constraint firstItem="f7q-dA-vAP" firstAttribute="top" secondItem="lMG-jn-s9h" secondAttribute="bottom" constant="8" id="QiN-Jc-kiz"/>
+                            <constraint firstItem="f7q-dA-vAP" firstAttribute="centerX" secondItem="FO3-Gs-Zpe" secondAttribute="centerX" id="eEE-tJ-E2I"/>
+                            <constraint firstItem="lMG-jn-s9h" firstAttribute="centerY" secondItem="FO3-Gs-Zpe" secondAttribute="centerY" id="jXw-FM-MI6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AbQ-Vw-P86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2501" y="-388"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Boton_Menu" width="625" height="154"/>
+        <image name="main_background" width="1686" height="1173"/>
+        <image name="sana_logo" width="124" height="44"/>
+    </resources>
+</document>
