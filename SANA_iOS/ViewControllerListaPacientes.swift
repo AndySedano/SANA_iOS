@@ -33,6 +33,8 @@ class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdati
         
         self.tableView.tableHeaderView = self.resultSearchController.searchBar
         
+        self.navigationController!.setNavigationBarHidden(false, animated: true)
+        
         self.tableView.reloadData()
     }
 

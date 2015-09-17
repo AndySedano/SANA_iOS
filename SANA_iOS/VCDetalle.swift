@@ -21,7 +21,7 @@ class VCDetalle: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        nombre.text=p.nombres
+        nombre.text=p.nombres + " " + p.apellidoP
         edad.text=String(p.edad)
         genero.text=p.genero
         estatura.text=String(p.estatura)

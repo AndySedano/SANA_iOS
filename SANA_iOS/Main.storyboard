@@ -5,10 +5,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Menu Inicial-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SANA_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="VCMenuInicial" customModule="SANA_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -31,14 +31,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sana_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bh5-Bv-hbB">
                                 <rect key="frame" x="238" y="72" width="124" height="44"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X61-k9-uui">
-                                <rect key="frame" x="-12.5" y="426" width="625" height="154"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="Configuracion" backgroundImage="Boton_Menu"/>
-                                <connections>
-                                    <segue destination="Vuz-27-gXf" kind="presentation" id="cpk-t1-V2e"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLb-do-oQW">
                                 <rect key="frame" x="-12.5" y="102" width="625" height="154"/>
                                 <constraints>
@@ -70,6 +62,14 @@
                                 </variation>
                                 <connections>
                                     <segue destination="Ggo-EN-lZY" kind="presentation" id="2oI-aX-k1i"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X61-k9-uui">
+                                <rect key="frame" x="-12" y="426" width="625" height="154"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <state key="normal" title="Acerca de" backgroundImage="Boton_Menu"/>
+                                <connections>
+                                    <segue destination="Vuz-27-gXf" kind="presentation" id="cpk-t1-V2e"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1056" y="348.75"/>
+            <point key="canvasLocation" x="1056" y="348"/>
         </scene>
         <!--Configuracion-->
         <scene sceneID="Zvb-Bj-fB6">
@@ -126,20 +126,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5l4-op-1S2">
-                                <rect key="frame" x="272" y="544" width="56" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="263" y="528" width="75" height="45"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
                                 <state key="normal" title="Cerrar">
                                     <color key="titleColor" red="1" green="0.090444672069999996" blue="0.1056410797" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="cerrar:" destination="Vuz-27-gXf" eventType="touchUpInside" id="8UD-pH-4E8"/>
-                                    <action selector="cerrar:" destination="qJH-7d-st5" eventType="touchUpInside" id="THc-HJ-rxx"/>
+                                    <action selector="cerrar:" destination="Vuz-27-gXf" eventType="touchUpInside" id="frh-hE-2eK"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dp1-cZ-Wnd">
-                                <rect key="frame" x="20" y="28" width="560" height="200"/>
+                                <rect key="frame" x="20" y="28" width="560" height="472"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="MCv-1p-LJP"/>
+                                    <constraint firstAttribute="height" constant="472" id="GkB-RW-gaf"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Aplicaci">
@@ -300,11 +299,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="o5j-GW-hPM" firstAttribute="top" secondItem="5l4-op-1S2" secondAttribute="bottom" constant="20" id="CIJ-RV-kZM"/>
-                            <constraint firstItem="dp1-cZ-Wnd" firstAttribute="top" secondItem="7zc-Dj-CBv" secondAttribute="bottom" constant="8" id="EOo-Oa-Md8"/>
-                            <constraint firstItem="dp1-cZ-Wnd" firstAttribute="trailing" secondItem="aum-Xh-2Zo" secondAttribute="trailingMargin" id="J3a-ft-XoD"/>
-                            <constraint firstItem="dp1-cZ-Wnd" firstAttribute="leading" secondItem="aum-Xh-2Zo" secondAttribute="leadingMargin" id="hdI-tS-E08"/>
+                            <constraint firstItem="dp1-cZ-Wnd" firstAttribute="top" secondItem="7zc-Dj-CBv" secondAttribute="bottom" constant="8" id="24P-eJ-Nyh"/>
+                            <constraint firstItem="o5j-GW-hPM" firstAttribute="top" secondItem="5l4-op-1S2" secondAttribute="bottom" constant="27" id="CIJ-RV-kZM"/>
+                            <constraint firstItem="dp1-cZ-Wnd" firstAttribute="leading" secondItem="aum-Xh-2Zo" secondAttribute="leadingMargin" id="IyM-7U-fBc"/>
+                            <constraint firstItem="5l4-op-1S2" firstAttribute="top" secondItem="dp1-cZ-Wnd" secondAttribute="bottom" constant="28" id="KdP-C9-gQV"/>
                             <constraint firstItem="5l4-op-1S2" firstAttribute="centerX" secondItem="aum-Xh-2Zo" secondAttribute="centerX" id="nm0-d0-tai"/>
+                            <constraint firstItem="dp1-cZ-Wnd" firstAttribute="trailing" secondItem="aum-Xh-2Zo" secondAttribute="trailingMargin" id="vXY-df-Hdb"/>
                         </constraints>
                     </view>
                 </viewController>
