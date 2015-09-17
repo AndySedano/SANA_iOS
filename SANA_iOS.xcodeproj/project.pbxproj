@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		A14757D91BAA20B1003C502C /* VCDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14757D71BAA20B1003C502C /* VCDetalle.swift */; };
 		A14757DA1BAA20B1003C502C /* ViewControllerListaPacientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */; };
+		E1AD6F291BAA625100D79D38 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F281BAA625100D79D38 /* Paciente.swift */; };
+		E1AD6F2D1BAA80D600D79D38 /* PacienteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */; };
+		E1AD6F301BAA980400D79D38 /* VCConfiguracion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F2F1BAA980400D79D38 /* VCConfiguracion.swift */; };
 		E1EC289A1BAA1D5B00E19AD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC28991BAA1D5B00E19AD6 /* AppDelegate.swift */; };
 		E1EC289C1BAA1D5B00E19AD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC289B1BAA1D5B00E19AD6 /* ViewController.swift */; };
 		E1EC28A21BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1EC28A01BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld */; };
@@ -21,6 +24,9 @@
 /* Begin PBXFileReference section */
 		A14757D71BAA20B1003C502C /* VCDetalle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDetalle.swift; sourceTree = "<group>"; };
 		A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerListaPacientes.swift; sourceTree = "<group>"; };
+		E1AD6F281BAA625100D79D38 /* Paciente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
+		E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacienteCell.swift; sourceTree = "<group>"; };
+		E1AD6F2F1BAA980400D79D38 /* VCConfiguracion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCConfiguracion.swift; sourceTree = "<group>"; };
 		E1EC28961BAA1D5B00E19AD6 /* SANA_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SANA_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EC28991BAA1D5B00E19AD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1EC289B1BAA1D5B00E19AD6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +49,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1AD6F2E1BAA977800D79D38 /* Controladores */ = {
+			isa = PBXGroup;
+			children = (
+				E1EC289B1BAA1D5B00E19AD6 /* ViewController.swift */,
+				A14757D71BAA20B1003C502C /* VCDetalle.swift */,
+				E1EC28AE1BAA1E6700E19AD6 /* VCPregunta.swift */,
+				A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */,
+				E1AD6F2F1BAA980400D79D38 /* VCConfiguracion.swift */,
+			);
+			name = Controladores;
+			sourceTree = "<group>";
+		};
 		E1EC288D1BAA1D5B00E19AD6 = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +80,10 @@
 		E1EC28981BAA1D5B00E19AD6 /* SANA_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				E1EC28AE1BAA1E6700E19AD6 /* VCPregunta.swift */,
 				E1EC28991BAA1D5B00E19AD6 /* AppDelegate.swift */,
-				E1EC289B1BAA1D5B00E19AD6 /* ViewController.swift */,
-				A14757D71BAA20B1003C502C /* VCDetalle.swift */,
-				A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */,
+				E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */,
+				E1AD6F281BAA625100D79D38 /* Paciente.swift */,
+				E1AD6F2E1BAA977800D79D38 /* Controladores */,
 				E1EC28B41BAA1FE400E19AD6 /* Main.storyboard */,
 				E1EC28A51BAA1D5B00E19AD6 /* LaunchScreen.storyboard */,
 				E1EC28A81BAA1D5B00E19AD6 /* Info.plist */,
@@ -147,11 +164,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1AD6F301BAA980400D79D38 /* VCConfiguracion.swift in Sources */,
 				E1EC289C1BAA1D5B00E19AD6 /* ViewController.swift in Sources */,
 				A14757DA1BAA20B1003C502C /* ViewControllerListaPacientes.swift in Sources */,
 				A14757D91BAA20B1003C502C /* VCDetalle.swift in Sources */,
 				E1EC289A1BAA1D5B00E19AD6 /* AppDelegate.swift in Sources */,
+				E1AD6F291BAA625100D79D38 /* Paciente.swift in Sources */,
 				E1EC28AF1BAA1E6700E19AD6 /* VCPregunta.swift in Sources */,
+				E1AD6F2D1BAA80D600D79D38 /* PacienteCell.swift in Sources */,
 				E1EC28A21BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,6 +278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SANA_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -269,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SANA_iOS/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
