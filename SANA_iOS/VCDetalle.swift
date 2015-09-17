@@ -2,7 +2,8 @@
 //  VCDetalle.swift
 //  Proyecto
 //
-//  Created by Andrés Crisóstomo Vega on 16/09/15.
+//  Andres E. Sedano A00399842
+//  Josué Adán Crisóstomo A01333760
 //  Copyright © 2015 Andres Sedano. All rights reserved.
 //
 

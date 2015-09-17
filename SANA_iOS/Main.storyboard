@@ -302,7 +302,7 @@
                             <constraint firstItem="dp1-cZ-Wnd" firstAttribute="top" secondItem="7zc-Dj-CBv" secondAttribute="bottom" constant="8" id="24P-eJ-Nyh"/>
                             <constraint firstItem="o5j-GW-hPM" firstAttribute="top" secondItem="5l4-op-1S2" secondAttribute="bottom" constant="27" id="CIJ-RV-kZM"/>
                             <constraint firstItem="dp1-cZ-Wnd" firstAttribute="leading" secondItem="aum-Xh-2Zo" secondAttribute="leadingMargin" id="IyM-7U-fBc"/>
-                            <constraint firstItem="5l4-op-1S2" firstAttribute="top" secondItem="dp1-cZ-Wnd" secondAttribute="bottom" constant="28" id="KdP-C9-gQV"/>
+                            <constraint firstItem="5l4-op-1S2" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dp1-cZ-Wnd" secondAttribute="bottom" constant="28" id="KdP-C9-gQV"/>
                             <constraint firstItem="5l4-op-1S2" firstAttribute="centerX" secondItem="aum-Xh-2Zo" secondAttribute="centerX" id="nm0-d0-tai"/>
                             <constraint firstItem="dp1-cZ-Wnd" firstAttribute="trailing" secondItem="aum-Xh-2Zo" secondAttribute="trailingMargin" id="vXY-df-Hdb"/>
                         </constraints>
