@@ -9,10 +9,21 @@
 /* Begin PBXBuildFile section */
 		A14757D91BAA20B1003C502C /* VCDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14757D71BAA20B1003C502C /* VCDetalle.swift */; };
 		A14757DA1BAA20B1003C502C /* ViewControllerListaPacientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */; };
+		E10870B81BDA99180001429B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10870B71BDA99180001429B /* SwiftyJSON.swift */; };
+		E197BA3A1BD9BBAA0014B124 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E197BA391BD9BBAA0014B124 /* Settings.bundle */; };
 		E1AD6F291BAA625100D79D38 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F281BAA625100D79D38 /* Paciente.swift */; };
 		E1AD6F2D1BAA80D600D79D38 /* PacienteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */; };
 		E1AD6F301BAA980400D79D38 /* VCConfiguracion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F2F1BAA980400D79D38 /* VCConfiguracion.swift */; };
-		E1E813701BAB0FD9005C9B21 /* VCMenuInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8136F1BAB0FD9005C9B21 /* VCMenuInicial.swift */; settings = {ASSET_TAGS = (); }; };
+		E1DB0EAF1BDC20F700F8FF7E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB0EAE1BDC20F700F8FF7E /* DataManager.swift */; };
+		E1DB0EB61BDC7C1600F8FF7E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DB0EB41BDC7C1600F8FF7E /* Interface.storyboard */; };
+		E1DB0EB81BDC7C1600F8FF7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DB0EB71BDC7C1600F8FF7E /* Assets.xcassets */; };
+		E1DB0EBF1BDC7C1600F8FF7E /* SanaWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E1DB0EBE1BDC7C1600F8FF7E /* SanaWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E1DB0EC61BDC7C1600F8FF7E /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB0EC51BDC7C1600F8FF7E /* InterfaceController.swift */; };
+		E1DB0EC81BDC7C1600F8FF7E /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB0EC71BDC7C1600F8FF7E /* ExtensionDelegate.swift */; };
+		E1DB0ECA1BDC7C1600F8FF7E /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB0EC91BDC7C1600F8FF7E /* NotificationController.swift */; };
+		E1DB0ECC1BDC7C1600F8FF7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DB0ECB1BDC7C1600F8FF7E /* Assets.xcassets */; };
+		E1DB0ED01BDC7C1600F8FF7E /* SanaWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E1DB0EB21BDC7C1600F8FF7E /* SanaWatch.app */; };
+		E1E813701BAB0FD9005C9B21 /* VCMenuInicial.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E8136F1BAB0FD9005C9B21 /* VCMenuInicial.swift */; };
 		E1EC289A1BAA1D5B00E19AD6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC28991BAA1D5B00E19AD6 /* AppDelegate.swift */; };
 		E1EC289C1BAA1D5B00E19AD6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1EC289B1BAA1D5B00E19AD6 /* ViewController.swift */; };
 		E1EC28A21BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E1EC28A01BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld */; };
@@ -22,12 +33,68 @@
 		E1EC28B51BAA1FE400E19AD6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1EC28B41BAA1FE400E19AD6 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		E1DB0EC01BDC7C1600F8FF7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1EC288E1BAA1D5B00E19AD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DB0EBD1BDC7C1600F8FF7E;
+			remoteInfo = "SanaWatch Extension";
+		};
+		E1DB0ECE1BDC7C1600F8FF7E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E1EC288E1BAA1D5B00E19AD6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E1DB0EB11BDC7C1600F8FF7E;
+			remoteInfo = SanaWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E1DB0ED41BDC7C1600F8FF7E /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E1DB0EBF1BDC7C1600F8FF7E /* SanaWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DB0ED81BDC7C1600F8FF7E /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E1DB0ED01BDC7C1600F8FF7E /* SanaWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		A14757D71BAA20B1003C502C /* VCDetalle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDetalle.swift; sourceTree = "<group>"; };
 		A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerListaPacientes.swift; sourceTree = "<group>"; };
+		E10870B71BDA99180001429B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E197BA391BD9BBAA0014B124 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		E1AD6F281BAA625100D79D38 /* Paciente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
 		E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacienteCell.swift; sourceTree = "<group>"; };
 		E1AD6F2F1BAA980400D79D38 /* VCConfiguracion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCConfiguracion.swift; sourceTree = "<group>"; };
+		E1DB0EAE1BDC20F700F8FF7E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		E1DB0EB21BDC7C1600F8FF7E /* SanaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1DB0EB51BDC7C1600F8FF7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		E1DB0EB71BDC7C1600F8FF7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1DB0EB91BDC7C1600F8FF7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1DB0EBE1BDC7C1600F8FF7E /* SanaWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "SanaWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1DB0EC41BDC7C1600F8FF7E /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E1DB0EC51BDC7C1600F8FF7E /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		E1DB0EC71BDC7C1600F8FF7E /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		E1DB0EC91BDC7C1600F8FF7E /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		E1DB0ECB1BDC7C1600F8FF7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E1DB0ECD1BDC7C1600F8FF7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E1E8136F1BAB0FD9005C9B21 /* VCMenuInicial.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCMenuInicial.swift; sourceTree = "<group>"; };
 		E1EC28961BAA1D5B00E19AD6 /* SANA_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SANA_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EC28991BAA1D5B00E19AD6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +108,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E1DB0EBB1BDC7C1600F8FF7E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1EC28931BAA1D5B00E19AD6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -64,10 +138,43 @@
 			name = Controladores;
 			sourceTree = "<group>";
 		};
+		E1DB0EB31BDC7C1600F8FF7E /* SanaWatch */ = {
+			isa = PBXGroup;
+			children = (
+				E1DB0EB41BDC7C1600F8FF7E /* Interface.storyboard */,
+				E1DB0EB71BDC7C1600F8FF7E /* Assets.xcassets */,
+				E1DB0EB91BDC7C1600F8FF7E /* Info.plist */,
+			);
+			path = SanaWatch;
+			sourceTree = "<group>";
+		};
+		E1DB0EC21BDC7C1600F8FF7E /* SanaWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E1DB0EC51BDC7C1600F8FF7E /* InterfaceController.swift */,
+				E1DB0EC71BDC7C1600F8FF7E /* ExtensionDelegate.swift */,
+				E1DB0EC91BDC7C1600F8FF7E /* NotificationController.swift */,
+				E1DB0ECB1BDC7C1600F8FF7E /* Assets.xcassets */,
+				E1DB0ECD1BDC7C1600F8FF7E /* Info.plist */,
+				E1DB0EC31BDC7C1600F8FF7E /* Supporting Files */,
+			);
+			path = "SanaWatch Extension";
+			sourceTree = "<group>";
+		};
+		E1DB0EC31BDC7C1600F8FF7E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E1DB0EC41BDC7C1600F8FF7E /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		E1EC288D1BAA1D5B00E19AD6 = {
 			isa = PBXGroup;
 			children = (
 				E1EC28981BAA1D5B00E19AD6 /* SANA_iOS */,
+				E1DB0EB31BDC7C1600F8FF7E /* SanaWatch */,
+				E1DB0EC21BDC7C1600F8FF7E /* SanaWatch Extension */,
 				E1EC28971BAA1D5B00E19AD6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -76,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				E1EC28961BAA1D5B00E19AD6 /* SANA_iOS.app */,
+				E1DB0EB21BDC7C1600F8FF7E /* SanaWatch.app */,
+				E1DB0EBE1BDC7C1600F8FF7E /* SanaWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,14 +193,17 @@
 			isa = PBXGroup;
 			children = (
 				E1EC28991BAA1D5B00E19AD6 /* AppDelegate.swift */,
+				E1DB0EAE1BDC20F700F8FF7E /* DataManager.swift */,
 				E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */,
 				E1AD6F281BAA625100D79D38 /* Paciente.swift */,
+				E10870B71BDA99180001429B /* SwiftyJSON.swift */,
 				E1AD6F2E1BAA977800D79D38 /* Controladores */,
 				E1EC28B41BAA1FE400E19AD6 /* Main.storyboard */,
 				E1EC28A51BAA1D5B00E19AD6 /* LaunchScreen.storyboard */,
 				E1EC28A81BAA1D5B00E19AD6 /* Info.plist */,
 				E1EC28A01BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld */,
 				E1EC28B01BAA1EA200E19AD6 /* Assets.xcassets */,
+				E197BA391BD9BBAA0014B124 /* Settings.bundle */,
 			);
 			path = SANA_iOS;
 			sourceTree = "<group>";
@@ -99,6 +211,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E1DB0EB11BDC7C1600F8FF7E /* SanaWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1DB0ED51BDC7C1600F8FF7E /* Build configuration list for PBXNativeTarget "SanaWatch" */;
+			buildPhases = (
+				E1DB0EB01BDC7C1600F8FF7E /* Resources */,
+				E1DB0ED41BDC7C1600F8FF7E /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E1DB0EC11BDC7C1600F8FF7E /* PBXTargetDependency */,
+			);
+			name = SanaWatch;
+			productName = SanaWatch;
+			productReference = E1DB0EB21BDC7C1600F8FF7E /* SanaWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		E1DB0EBD1BDC7C1600F8FF7E /* SanaWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E1DB0ED11BDC7C1600F8FF7E /* Build configuration list for PBXNativeTarget "SanaWatch Extension" */;
+			buildPhases = (
+				E1DB0EBA1BDC7C1600F8FF7E /* Sources */,
+				E1DB0EBB1BDC7C1600F8FF7E /* Frameworks */,
+				E1DB0EBC1BDC7C1600F8FF7E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SanaWatch Extension";
+			productName = "SanaWatch Extension";
+			productReference = E1DB0EBE1BDC7C1600F8FF7E /* SanaWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		E1EC28951BAA1D5B00E19AD6 /* SANA_iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E1EC28AB1BAA1D5B00E19AD6 /* Build configuration list for PBXNativeTarget "SANA_iOS" */;
@@ -106,10 +252,12 @@
 				E1EC28921BAA1D5B00E19AD6 /* Sources */,
 				E1EC28931BAA1D5B00E19AD6 /* Frameworks */,
 				E1EC28941BAA1D5B00E19AD6 /* Resources */,
+				E1DB0ED81BDC7C1600F8FF7E /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E1DB0ECF1BDC7C1600F8FF7E /* PBXTargetDependency */,
 			);
 			name = SANA_iOS;
 			productName = SANA_iOS;
@@ -122,9 +270,18 @@
 		E1EC288E1BAA1D5B00E19AD6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Andres Sedano";
 				TargetAttributes = {
+					E1DB0EB11BDC7C1600F8FF7E = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = QH267RVK5T;
+					};
+					E1DB0EBD1BDC7C1600F8FF7E = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = QH267RVK5T;
+					};
 					E1EC28951BAA1D5B00E19AD6 = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = QH267RVK5T;
@@ -145,15 +302,35 @@
 			projectRoot = "";
 			targets = (
 				E1EC28951BAA1D5B00E19AD6 /* SANA_iOS */,
+				E1DB0EB11BDC7C1600F8FF7E /* SanaWatch */,
+				E1DB0EBD1BDC7C1600F8FF7E /* SanaWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E1DB0EB01BDC7C1600F8FF7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DB0EB81BDC7C1600F8FF7E /* Assets.xcassets in Resources */,
+				E1DB0EB61BDC7C1600F8FF7E /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1DB0EBC1BDC7C1600F8FF7E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DB0ECC1BDC7C1600F8FF7E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1EC28941BAA1D5B00E19AD6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E197BA3A1BD9BBAA0014B124 /* Settings.bundle in Resources */,
 				E1EC28A71BAA1D5B00E19AD6 /* LaunchScreen.storyboard in Resources */,
 				E1EC28B11BAA1EA200E19AD6 /* Assets.xcassets in Resources */,
 				E1EC28B51BAA1FE400E19AD6 /* Main.storyboard in Resources */,
@@ -163,13 +340,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E1DB0EBA1BDC7C1600F8FF7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DB0ECA1BDC7C1600F8FF7E /* NotificationController.swift in Sources */,
+				E1DB0EC81BDC7C1600F8FF7E /* ExtensionDelegate.swift in Sources */,
+				E1DB0EC61BDC7C1600F8FF7E /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E1EC28921BAA1D5B00E19AD6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E1AD6F301BAA980400D79D38 /* VCConfiguracion.swift in Sources */,
+				E1DB0EAF1BDC20F700F8FF7E /* DataManager.swift in Sources */,
 				E1EC289C1BAA1D5B00E19AD6 /* ViewController.swift in Sources */,
 				A14757DA1BAA20B1003C502C /* ViewControllerListaPacientes.swift in Sources */,
+				E10870B81BDA99180001429B /* SwiftyJSON.swift in Sources */,
 				A14757D91BAA20B1003C502C /* VCDetalle.swift in Sources */,
 				E1EC289A1BAA1D5B00E19AD6 /* AppDelegate.swift in Sources */,
 				E1E813701BAB0FD9005C9B21 /* VCMenuInicial.swift in Sources */,
@@ -182,7 +371,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		E1DB0EC11BDC7C1600F8FF7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1DB0EBD1BDC7C1600F8FF7E /* SanaWatch Extension */;
+			targetProxy = E1DB0EC01BDC7C1600F8FF7E /* PBXContainerItemProxy */;
+		};
+		E1DB0ECF1BDC7C1600F8FF7E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E1DB0EB11BDC7C1600F8FF7E /* SanaWatch */;
+			targetProxy = E1DB0ECE1BDC7C1600F8FF7E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		E1DB0EB41BDC7C1600F8FF7E /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E1DB0EB51BDC7C1600F8FF7E /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		E1EC28A51BAA1D5B00E19AD6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -194,6 +404,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E1DB0ED21BDC7C1600F8FF7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SanaWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		E1DB0ED31BDC7C1600F8FF7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "SanaWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS.watchkitapp.watchkitextension";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		E1DB0ED61BDC7C1600F8FF7E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = SanaWatch_Extension;
+				INFOPLIST_FILE = SanaWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		E1DB0ED71BDC7C1600F8FF7E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = SanaWatch_Extension;
+				INFOPLIST_FILE = SanaWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 		E1EC28A91BAA1D5B00E19AD6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -304,6 +574,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E1DB0ED11BDC7C1600F8FF7E /* Build configuration list for PBXNativeTarget "SanaWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1DB0ED21BDC7C1600F8FF7E /* Debug */,
+				E1DB0ED31BDC7C1600F8FF7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E1DB0ED51BDC7C1600F8FF7E /* Build configuration list for PBXNativeTarget "SanaWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1DB0ED61BDC7C1600F8FF7E /* Debug */,
+				E1DB0ED71BDC7C1600F8FF7E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E1EC28911BAA1D5B00E19AD6 /* Build configuration list for PBXProject "SANA_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
