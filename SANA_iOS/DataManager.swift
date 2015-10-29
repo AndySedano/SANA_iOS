@@ -26,8 +26,6 @@ class DataManager{
     
     class func getDatosURL() -> Dictionary<Character, Array<Paciente>>{
         
-        
-        
         if let url = NSURL(string: DatosURL) {
             if let data = NSData(contentsOfURL: url){
                 json = JSON(data: data)
@@ -76,5 +74,36 @@ class DataManager{
         return datos
         
     }
+    
+//    class func getDatosWatch() -> [PacienteWatch]{
+//        
+//        var pac:[PacienteWatch] = []
+//        
+//        if let url = NSURL(string: DatosURL) {
+//            if let data = NSData(contentsOfURL: url){
+//                json = JSON(data: data)
+//            }
+//        }
+//        
+//        for (_,subJson):(String, JSON) in json {
+//            
+//            let nombre = subJson["nombre"].string!
+//            let apellidoP = subJson["apellidoP"].string!
+//            let apellidoM = subJson["apellidoM"].string!
+//            let estatura = subJson["estatura"].double!
+//            let peso = subJson["peso"].double!
+//            let fragil = subJson["fragil"].bool!
+//            let d = subJson["diaN"].int!
+//            let m = subJson["mesN"].int!
+//            let a = subJson["anioN"].int!
+//            
+//            let p = PacienteWatch(nombre: nombre, apellidoP: apellidoP, apellidoM: apellidoM, estatura: estatura, peso:peso, dia:d, mes:m, año:a, fragil:fragil)
+//            
+//            pac.append(p)
+//            
+//        }
+//        
+//        return pac
+//    }
     
 }

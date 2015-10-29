@@ -14,6 +14,12 @@
 		E1AD6F291BAA625100D79D38 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F281BAA625100D79D38 /* Paciente.swift */; };
 		E1AD6F2D1BAA80D600D79D38 /* PacienteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */; };
 		E1AD6F301BAA980400D79D38 /* VCConfiguracion.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F2F1BAA980400D79D38 /* VCConfiguracion.swift */; };
+		E1B7D6631BE1B8BF0085AD77 /* PacienteCellWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B7D6621BE1B8BF0085AD77 /* PacienteCellWatch.swift */; };
+		E1B7D6651BE1CF330085AD77 /* ElDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B7D6641BE1CF330085AD77 /* ElDetalle.swift */; };
+		E1B7D6671BE1D0AE0085AD77 /* TablaPacientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B7D6661BE1D0AE0085AD77 /* TablaPacientes.swift */; };
+		E1B7D6691BE1DF4F0085AD77 /* PacienteWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B7D6681BE1DF4F0085AD77 /* PacienteWatch.swift */; };
+		E1B7D66A1BE1E3AA0085AD77 /* PacienteWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B7D6681BE1DF4F0085AD77 /* PacienteWatch.swift */; };
+		E1B7D66B1BE292EB0085AD77 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1438B6D1BE19A8E006982EE /* SwiftyJSON.swift */; };
 		E1DB0EAF1BDC20F700F8FF7E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1DB0EAE1BDC20F700F8FF7E /* DataManager.swift */; };
 		E1DB0EB61BDC7C1600F8FF7E /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1DB0EB41BDC7C1600F8FF7E /* Interface.storyboard */; };
 		E1DB0EB81BDC7C1600F8FF7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1DB0EB71BDC7C1600F8FF7E /* Assets.xcassets */; };
@@ -83,6 +89,10 @@
 		E1AD6F281BAA625100D79D38 /* Paciente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
 		E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacienteCell.swift; sourceTree = "<group>"; };
 		E1AD6F2F1BAA980400D79D38 /* VCConfiguracion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCConfiguracion.swift; sourceTree = "<group>"; };
+		E1B7D6621BE1B8BF0085AD77 /* PacienteCellWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacienteCellWatch.swift; sourceTree = "<group>"; };
+		E1B7D6641BE1CF330085AD77 /* ElDetalle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElDetalle.swift; sourceTree = "<group>"; };
+		E1B7D6661BE1D0AE0085AD77 /* TablaPacientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TablaPacientes.swift; sourceTree = "<group>"; };
+		E1B7D6681BE1DF4F0085AD77 /* PacienteWatch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacienteWatch.swift; sourceTree = "<group>"; };
 		E1DB0EAE1BDC20F700F8FF7E /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		E1DB0EB21BDC7C1600F8FF7E /* SanaWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanaWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1DB0EB51BDC7C1600F8FF7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
@@ -151,6 +161,10 @@
 		E1DB0EC21BDC7C1600F8FF7E /* SanaWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				E1B7D6641BE1CF330085AD77 /* ElDetalle.swift */,
+				E1B7D6661BE1D0AE0085AD77 /* TablaPacientes.swift */,
+				E1B7D6621BE1B8BF0085AD77 /* PacienteCellWatch.swift */,
+				E1B7D6681BE1DF4F0085AD77 /* PacienteWatch.swift */,
 				E1DB0EC51BDC7C1600F8FF7E /* InterfaceController.swift */,
 				E1DB0EC71BDC7C1600F8FF7E /* ExtensionDelegate.swift */,
 				E1DB0EC91BDC7C1600F8FF7E /* NotificationController.swift */,
@@ -284,7 +298,7 @@
 					};
 					E1EC28951BAA1D5B00E19AD6 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 5TZM3Q8S2K;
+						DevelopmentTeam = QH267RVK5T;
 					};
 				};
 			};
@@ -344,8 +358,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1B7D6651BE1CF330085AD77 /* ElDetalle.swift in Sources */,
 				E1DB0ECA1BDC7C1600F8FF7E /* NotificationController.swift in Sources */,
 				E1DB0EC81BDC7C1600F8FF7E /* ExtensionDelegate.swift in Sources */,
+				E1B7D66B1BE292EB0085AD77 /* SwiftyJSON.swift in Sources */,
+				E1B7D6671BE1D0AE0085AD77 /* TablaPacientes.swift in Sources */,
+				E1B7D6691BE1DF4F0085AD77 /* PacienteWatch.swift in Sources */,
+				E1B7D6631BE1B8BF0085AD77 /* PacienteCellWatch.swift in Sources */,
 				E1DB0EC61BDC7C1600F8FF7E /* InterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +385,7 @@
 				E1EC28AF1BAA1E6700E19AD6 /* VCPregunta.swift in Sources */,
 				E1AD6F2D1BAA80D600D79D38 /* PacienteCell.swift in Sources */,
 				E1EC28A21BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld in Sources */,
+				E1B7D66A1BE1E3AA0085AD77 /* PacienteWatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jfo-V1-ZNp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jfo-V1-ZNp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -17,25 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="main_background" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-PT-4Ue">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-H4-hxo">
-                                <rect key="frame" x="-12" y="426" width="625" height="154"/>
+                                <rect key="frame" x="184" y="528" width="232" height="52"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="Lista Pacientes" backgroundImage="Boton_Menu"/>
+                                <state key="normal" title="Lista Pacientes">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="tML-XQ-5kF" kind="show" identifier="buscarP" id="ilN-89-5n4"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sana_logo" translatesAutoresizingMaskIntoConstraints="NO" id="bh5-Bv-hbB">
-                                <rect key="frame" x="238" y="72" width="124" height="44"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sanaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="bh5-Bv-hbB">
+                                <rect key="frame" x="207" y="211" width="87" height="88"/>
                                 <animations/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sLb-do-oQW">
-                                <rect key="frame" x="-12.5" y="264" width="625" height="154"/>
+                                <rect key="frame" x="184" y="468" width="232" height="52"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="154" id="Ypg-lj-hOS">
@@ -45,7 +43,9 @@
                                     <constraint firstAttribute="height" constant="100" id="qL9-Eg-4jH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <state key="normal" title="Nueva Consulta" backgroundImage="Boton_Menu"/>
+                                <state key="normal" title="Nueva Consulta">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Ypg-lj-hOS"/>
@@ -68,22 +68,31 @@
                                     <segue destination="Ggo-EN-lZY" kind="presentation" id="2oI-aX-k1i"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="sana" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVt-18-HsS">
+                                <rect key="frame" x="302" y="253" width="91" height="50.5"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="91" id="Tgi-JU-HZr"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bh5-Bv-hbB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1yb-90-atn"/>
-                            <constraint firstItem="nBr-PT-4Ue" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="2v7-wz-sOm"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nBr-PT-4Ue" secondAttribute="bottom" id="9gU-b4-wNz"/>
+                            <constraint firstItem="KVt-18-HsS" firstAttribute="bottom" secondItem="bh5-Bv-hbB" secondAttribute="bottom" constant="4.5" id="1u6-df-m91"/>
+                            <constraint firstItem="bh5-Bv-hbB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-49.5" id="1yb-90-atn"/>
                             <constraint firstItem="sLb-do-oQW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="AD8-Df-gog"/>
-                            <constraint firstItem="nBr-PT-4Ue" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="K30-ce-XJc"/>
+                            <constraint firstItem="KVt-18-HsS" firstAttribute="leading" secondItem="bh5-Bv-hbB" secondAttribute="trailing" constant="8" symbolic="YES" id="VK1-vi-cqo"/>
                             <constraint firstItem="s8e-H4-hxo" firstAttribute="height" secondItem="sLb-do-oQW" secondAttribute="height" id="XBY-lq-iDN"/>
-                            <constraint firstAttribute="trailing" secondItem="nBr-PT-4Ue" secondAttribute="trailing" id="a6w-Qj-kdz"/>
                             <constraint firstItem="sLb-do-oQW" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aox-r1-pGD"/>
                             <constraint firstItem="s8e-H4-hxo" firstAttribute="top" secondItem="sLb-do-oQW" secondAttribute="bottom" constant="8" id="fJe-x4-2jq"/>
                             <constraint firstItem="s8e-H4-hxo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hbj-K6-Gme"/>
-                            <constraint firstItem="bh5-Bv-hbB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="qhj-ds-HMD"/>
+                            <constraint firstItem="bh5-Bv-hbB" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="147" id="qhj-ds-HMD"/>
                             <constraint firstItem="sLb-do-oQW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t9i-9d-4gX"/>
+                            <constraint firstItem="KVt-18-HsS" firstAttribute="top" secondItem="bh5-Bv-hbB" secondAttribute="top" constant="42" id="vOn-80-O1l"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="s8e-H4-hxo" secondAttribute="bottom" constant="20" id="xfP-Nb-5F8"/>
                             <constraint firstItem="s8e-H4-hxo" firstAttribute="width" secondItem="sLb-do-oQW" secondAttribute="width" id="zFo-um-r1f"/>
                         </constraints>
@@ -500,7 +509,7 @@
                                             <constraint firstAttribute="height" constant="21" id="f8I-N0-HnK"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.89134615380000004" green="0.44542691229999998" blue="0.45957661440000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.80350560897435896" green="0.032793354381754861" blue="0.022449634698564282" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelEstatura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RXx-oh-dkI">
@@ -526,7 +535,7 @@
                                             <constraint firstAttribute="height" constant="21" id="bWW-CX-4ff"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.89134615380000004" green="0.44542691229999998" blue="0.45957661440000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.80350560900000001" green="0.03279335438" blue="0.022449634699999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AGT-gr-xlt">
@@ -541,7 +550,7 @@
                                             <constraint firstAttribute="height" constant="21" id="YEn-nF-1dG"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.89134615380000004" green="0.44542691229999998" blue="0.45957661440000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.80350560900000001" green="0.03279335438" blue="0.022449634699999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelGS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TRp-rT-hu2">
@@ -566,7 +575,7 @@
                                             <constraint firstAttribute="height" constant="21" id="FKM-Oc-Axf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.89134615380000004" green="0.44542691229999998" blue="0.45957661440000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="textColor" red="0.80350560900000001" green="0.03279335438" blue="0.022449634699999998" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LabelTelefono" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bh-Uj-TKI">
@@ -782,10 +791,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Boton_Menu" width="625" height="154"/>
         <image name="Hombre" width="100" height="100"/>
         <image name="defaultUser" width="200" height="200"/>
-        <image name="main_background" width="1686" height="1173"/>
-        <image name="sana_logo" width="124" height="44"/>
+        <image name="sanaLogo" width="87" height="88"/>
     </resources>
 </document>

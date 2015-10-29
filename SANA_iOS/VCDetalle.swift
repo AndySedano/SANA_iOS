@@ -47,6 +47,9 @@ class VCDetalle: UIViewController {
         self.estatura.text = String(p.estatura)
         self.telefono.text = p.telefono
         self.grupoSanguineo.text = p.gs
+        if(p.genero == "female"){
+            genero.image = UIImage(named: "Mujer")
+        }
     }
     
     func changePhoto(){
@@ -106,7 +109,6 @@ class VCDetalle: UIViewController {
         }
     }
     
-
     /*
     // MARK: - Navigation
 

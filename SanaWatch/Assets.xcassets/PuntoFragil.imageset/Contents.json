@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "LaunchScreen.png",
+      "filename" : "PuntoFragil.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "LaunchScreen-1.png",
+      "filename" : "PuntoFragil-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "LaunchScreen-2.png",
+      "filename" : "PuntoFragil-2.png",
       "scale" : "3x"
     }
   ],

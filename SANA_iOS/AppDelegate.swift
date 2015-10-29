@@ -9,12 +9,21 @@
 
 import UIKit
 import CoreData
+import WatchConnectivity
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var shortcutItem: UIApplicationShortcutItem?
+//    var session: WCSession? {
+//        didSet {
+//            if let session = session {
+//                session.delegate = self
+//                session.activateSession()
+//            }
+//        }
+//    }
     
     enum QuickActionType: String{
         case search = "mx.itesm.SANA-iOS.nuevo"
@@ -28,7 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var getStartButtonQuickAction = false
         
         if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem{
-            print("llamofuncion")
             getStartButtonQuickAction = true
             handleQuickAction(shortcutItem)
         }
@@ -36,8 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return !getStartButtonQuickAction
     }
     
-
-
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -71,10 +77,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
-    
-    
-    // AQUIQEUIQWUEIQWUEIQWEUCIUQWOE
-    //AJDFIHAISDLJFAIOSDJFLSDJFALKSD
 
     func handleShortcut( shortcutItem:UIApplicationShortcutItem ) -> Bool {
         print("Handling shortcut")
@@ -190,6 +192,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
 }
+
+//extension AppDelegate: WCSessionDelegate {
+//    
+//    func session(session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+//        print("EntroDelegate")
+//        if let _ = message["datosWatch"] as? String{
+//            let pacientes = DataManager.getDatosWatch()
+//            replyHandler(["datos": pacientes])
+//            
+//        }
+//    }
+//    
+//}
 
