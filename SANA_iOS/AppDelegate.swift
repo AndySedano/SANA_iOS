@@ -19,7 +19,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         case search = "mx.itesm.SANA-iOS.nuevo"
         case buscar = "mx.itesm.SANA-iOS.buscar"
     }
-    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -27,10 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         var getStartButtonQuickAction = false
         
-        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey]as? UIApplicationShortcutItem{
+        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem{
+            print("llamofuncion")
             getStartButtonQuickAction = true
             handleQuickAction(shortcutItem)
         }
+        
         return !getStartButtonQuickAction
     }
 
@@ -58,8 +59,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.saveContext()
     }
     
+    
+    // AQUIQEUIQWUEIQWUEIQWEUCIUQWOE
+    //AJDFIHAISDLJFAIOSDJFLSDJFALKSD
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        
+        print("Shortcut tapped")
+        
+    }
+    
     func handleQuickAction(shortcutItem: UIApplicationShortcutItem)-> Bool {
      var handle = false
+        
         print("Entro a la funcion")
         
         if let shortcutType = QuickActionType.init(rawValue: shortcutItem.type){
