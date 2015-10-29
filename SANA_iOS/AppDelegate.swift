@@ -60,18 +60,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func handleQuickAction(shortcutItem: UIApplicationShortcutItem)-> Bool {
      var handle = false
+        print("Entro a la funcion")
         
         if let shortcutType = QuickActionType.init(rawValue: shortcutItem.type){
             let rootNavigationViewController = window!.rootViewController as? UINavigationController
             let rootViewController = rootNavigationViewController?.viewControllers.first as UIViewController?
-            
+            print("Entro al if")
             rootNavigationViewController?.popToRootViewControllerAnimated(false)
             
             switch shortcutType{
-                
+            
             case.buscar:
                 rootViewController?.performSegueWithIdentifier("buscarP", sender:nil)
                 handle = true
+                print("Entro al case")
                 
             default:break
             }
