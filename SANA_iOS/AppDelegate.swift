@@ -16,8 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     enum QuickActionType: String{
-        case search="force.touch.buscar"
-        case buscar = "force.touch.buscar.buscador"
+        case search = "mx.itesm.SANA-iOS.nuevo"
+        case buscar = "mx.itesm.SANA-iOS.buscar"
     }
     
 

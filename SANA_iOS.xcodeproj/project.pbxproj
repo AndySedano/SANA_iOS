@@ -276,15 +276,15 @@
 				TargetAttributes = {
 					E1DB0EB11BDC7C1600F8FF7E = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 5TZM3Q8S2K;
+						DevelopmentTeam = QH267RVK5T;
 					};
 					E1DB0EBD1BDC7C1600F8FF7E = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 5TZM3Q8S2K;
+						DevelopmentTeam = QH267RVK5T;
 					};
 					E1EC28951BAA1D5B00E19AD6 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 5TZM3Q8S2K;
+						DevelopmentTeam = QH267RVK5T;
 					};
 				};
 			};
@@ -443,11 +443,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = SanaWatch_Extension;
 				INFOPLIST_FILE = SanaWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -460,11 +462,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				IBSC_MODULE = SanaWatch_Extension;
 				INFOPLIST_FILE = SanaWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS.watchkitapp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -560,11 +564,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SANA_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -574,11 +580,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = SANA_iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

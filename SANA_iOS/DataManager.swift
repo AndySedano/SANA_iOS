@@ -10,6 +10,7 @@ import Foundation
 
 let DatosURL = "http://andysedano.com/json/sana.json"
 var appDefaults:Dictionary<String, AnyObject>?
+var json:JSON = ""
 
 class DataManager{
     
@@ -25,7 +26,7 @@ class DataManager{
     
     class func getDatosURL() -> Dictionary<Character, Array<Paciente>>{
         
-        var json:JSON = ""
+        
         
         if let url = NSURL(string: DatosURL) {
             if let data = NSData(contentsOfURL: url){

@@ -35,7 +35,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Buscar Paciente</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>force.touch.buscar</string>
+			<string>mx.itesm.SANA-iOS.buscar</string>
 		</dict>
 		<dict>
 			<key>UIApplicationShortcutItemIconType</key>
@@ -43,7 +43,7 @@
 			<key>UIApplicationShortcutItemTitle</key>
 			<string>Nueva Consulta</string>
 			<key>UIApplicationShortcutItemType</key>
-			<string>force.touch.nuevo</string>
+			<string>mx.itesm.SANA-iOS.nuevo</string>
 		</dict>
 	</array>
 	<key>UILaunchStoryboardName</key>

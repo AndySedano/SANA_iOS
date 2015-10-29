@@ -63,13 +63,22 @@ class VCDetalle: UIViewController {
     }
     
     func changeBacground(fragil:Bool){
-        let colorTop = UIColor(red: 247.0/255.0, green: 136.0/255.0, blue: 136.0/255.0, alpha: 1.0).CGColor
+        
+        var colorTop:CGColor
+        
+        if(fragil){
+            colorTop = UIColor(red: 247.0/255.0, green: 136.0/255.0, blue: 136.0/255.0, alpha: 1.0).CGColor
+        } else {
+            colorTop = UIColor(red: 180.0/255.0, green: 235.0/255.0, blue: 148.0/255.0, alpha: 1.0).CGColor
+        }
+        
+        
         let colorBottom = UIColor.whiteColor().CGColor
         
         let gl: CAGradientLayer = CAGradientLayer()
         gl.colors = [colorTop, colorBottom]
         gl.frame = backgroundFragil.bounds
-        //backgroundFragil.layer.insertSublayer(gl, atIndex:  0)
+        //self.backgroundFragil.layer.i
     }
     
     func getNombreMes(mes:Int) -> String{

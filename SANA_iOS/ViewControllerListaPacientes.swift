@@ -192,7 +192,7 @@ class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdati
         let destino = segue.destinationViewController as! VCDetalle
         let indice = self.tableView.indexPathForSelectedRow?.row
         let seccion = self.tableView.indexPathForSelectedRow?.section
-        if mostrarDatosFiltrados
+        if mostrarDatosFiltrados && self.resultSearchController.searchBar.text != ""
         {
              destino.p = datosFiltrados[Array(datosFiltrados.keys.sort())[seccion!]]![indice!]
         } else {
