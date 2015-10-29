@@ -14,6 +14,7 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var shortcutItem: UIApplicationShortcutItem?
     
     enum QuickActionType: String{
         case search = "mx.itesm.SANA-iOS.nuevo"
@@ -34,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return !getStartButtonQuickAction
     }
+    
+
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -51,6 +54,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+       
+        print("Application did become active")
+        
+        guard let shortcut = shortcutItem else { return }
+        
+        print("- Shortcut property has been set")
+        
+        handleShortcut(shortcut)
+        
+        self.shortcutItem = nil
     }
 
     func applicationWillTerminate(application: UIApplication) {
@@ -62,21 +75,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // AQUIQEUIQWUEIQWUEIQWEUCIUQWOE
     //AJDFIHAISDLJFAIOSDJFLSDJFALKSD
+
+    func handleShortcut( shortcutItem:UIApplicationShortcutItem ) -> Bool {
+        print("Handling shortcut")
+        
+        var succeeded = false
+        
+        if( shortcutItem.type == "mx.itesm.SANA-iOS.buscar" ) {
+            
+            // Add your code here
+            print("- Handling \(shortcutItem.type)")
+            let rootNavigationViewController = window!.rootViewController as? UINavigationController
+            let rootViewController = rootNavigationViewController?.viewControllers.first as UIViewController?
+            rootViewController?.performSegueWithIdentifier("buscarP", sender:nil)
+            succeeded = true
+            
+        }
+        
+        return succeeded
+        
+    }
+    
     func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
         
-        print("Shortcut tapped")
+        print("Application performActionForShortcutItem")
+        completionHandler( handleShortcut(shortcutItem) )
         
     }
     
     func handleQuickAction(shortcutItem: UIApplicationShortcutItem)-> Bool {
      var handle = false
         
-        print("Entro a la funcion")
+        
         
         if let shortcutType = QuickActionType.init(rawValue: shortcutItem.type){
             let rootNavigationViewController = window!.rootViewController as? UINavigationController
             let rootViewController = rootNavigationViewController?.viewControllers.first as UIViewController?
-            print("Entro al if")
+            
             rootNavigationViewController?.popToRootViewControllerAnimated(false)
             
             switch shortcutType{
@@ -84,7 +119,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case.buscar:
                 rootViewController?.performSegueWithIdentifier("buscarP", sender:nil)
                 handle = true
-                print("Entro al case")
+                
                 
             default:break
             }
