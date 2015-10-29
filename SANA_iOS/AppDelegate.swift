@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var shortcutItem: UIApplicationShortcutItem?
     
     enum QuickActionType: String{
-        case search = "mx.itesm.SANA-iOS.nuevo"
+        case nuevo = "mx.itesm.SANA-iOS.nuevo"
         case buscar = "mx.itesm.SANA-iOS.buscar"
     }
 
@@ -36,6 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return !getStartButtonQuickAction
     }
     
+   
+    
+
+
 
 
     func applicationWillResignActive(application: UIApplication) {
@@ -92,6 +96,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
         }
         
+        if(shortcutItem.type == "mx.itesm.SANA-iOS.nuevo"){
+            let rootNavigationViewController = window!.rootViewController as? UINavigationController
+            let rootViewController = rootNavigationViewController?.viewControllers.first as UIViewController?
+            rootViewController?.performSegueWithIdentifier("nuevoP", sender:nil)
+            succeeded = true
+        }
+        
         return succeeded
         
     }
@@ -118,6 +129,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             case.buscar:
                 rootViewController?.performSegueWithIdentifier("buscarP", sender:nil)
+                handle = true
+            case.nuevo:
+                rootViewController?.performSegueWithIdentifier("nuevoP", sender:nil)
                 handle = true
                 
                 

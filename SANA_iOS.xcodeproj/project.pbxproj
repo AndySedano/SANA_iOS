@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A14702671BE1F089007C44C2 /* VCRegistro1.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14702661BE1F089007C44C2 /* VCRegistro1.swift */; };
+		A14702691BE1F0A6007C44C2 /* VCRegistro2.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14702681BE1F0A6007C44C2 /* VCRegistro2.swift */; };
 		A14757D91BAA20B1003C502C /* VCDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14757D71BAA20B1003C502C /* VCDetalle.swift */; };
 		A14757DA1BAA20B1003C502C /* ViewControllerListaPacientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */; };
 		E1438B6E1BE19A8E006982EE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1438B6D1BE19A8E006982EE /* SwiftyJSON.swift */; };
@@ -76,6 +78,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A14702661BE1F089007C44C2 /* VCRegistro1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRegistro1.swift; sourceTree = "<group>"; };
+		A14702681BE1F0A6007C44C2 /* VCRegistro2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCRegistro2.swift; sourceTree = "<group>"; };
 		A14757D71BAA20B1003C502C /* VCDetalle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDetalle.swift; sourceTree = "<group>"; };
 		A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerListaPacientes.swift; sourceTree = "<group>"; };
 		E1438B6D1BE19A8E006982EE /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 				A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */,
 				E1AD6F2F1BAA980400D79D38 /* VCConfiguracion.swift */,
 				E1E8136F1BAB0FD9005C9B21 /* VCMenuInicial.swift */,
+				A14702661BE1F089007C44C2 /* VCRegistro1.swift */,
+				A14702681BE1F0A6007C44C2 /* VCRegistro2.swift */,
 			);
 			name = Controladores;
 			sourceTree = "<group>";
@@ -360,11 +366,13 @@
 				E1438B6E1BE19A8E006982EE /* SwiftyJSON.swift in Sources */,
 				A14757DA1BAA20B1003C502C /* ViewControllerListaPacientes.swift in Sources */,
 				A14757D91BAA20B1003C502C /* VCDetalle.swift in Sources */,
+				A14702691BE1F0A6007C44C2 /* VCRegistro2.swift in Sources */,
 				E1EC289A1BAA1D5B00E19AD6 /* AppDelegate.swift in Sources */,
 				E1E813701BAB0FD9005C9B21 /* VCMenuInicial.swift in Sources */,
 				E1AD6F291BAA625100D79D38 /* Paciente.swift in Sources */,
 				E1EC28AF1BAA1E6700E19AD6 /* VCPregunta.swift in Sources */,
 				E1AD6F2D1BAA80D600D79D38 /* PacienteCell.swift in Sources */,
+				A14702671BE1F089007C44C2 /* VCRegistro1.swift in Sources */,
 				E1EC28A21BAA1D5B00E19AD6 /* SANA_iOS.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
