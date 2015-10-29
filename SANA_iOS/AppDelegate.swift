@@ -14,11 +14,24 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    enum QuickActionType: String{
+        case search="force.touch.buscar"
+        case buscar = "force.touch.buscar.buscador"
+    }
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        return true
+        //return true
+        
+        var getStartButtonQuickAction = false
+        
+        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey]as? UIApplicationShortcutItem{
+            getStartButtonQuickAction = true
+            handleQuickAction(shortcutItem)
+        }
+        return !getStartButtonQuickAction
     }
 
     func applicationWillResignActive(application: UIApplication) {
@@ -43,6 +56,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
+    }
+    
+    func handleQuickAction(shortcutItem: UIApplicationShortcutItem)-> Bool {
+     var handle = false
+        
+        if let shortcutType = QuickActionType.init(rawValue: shortcutItem.type){
+            let rootNavigationViewController = window!.rootViewController as? UINavigationController
+            let rootViewController = rootNavigationViewController?.viewControllers.first as UIViewController?
+            
+            rootNavigationViewController?.popToRootViewControllerAnimated(false)
+            
+            switch shortcutType{
+                
+            case.buscar:
+                rootViewController?.performSegueWithIdentifier("buscarP", sender:nil)
+                handle = true
+                
+            default:break
+            }
+            
+        }
+        return handle
     }
 
     // MARK: - Core Data stack
