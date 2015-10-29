@@ -29,16 +29,8 @@ class VCDetalle: UIViewController {
         super.viewDidLoad()
         
         actualizarDatos()
-        
-        
-        
-        if(p.fragil){
-            //fragilidad.text = "Fragil"
-        }else{
-            //fragilidad.text = "Sin fragilidad"
-        }
         changePhoto()
-        changeBacground(p.fragil)
+        changeBackground(p.fragil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -62,7 +54,7 @@ class VCDetalle: UIViewController {
         self.foto.clipsToBounds = true
     }
     
-    func changeBacground(fragil:Bool){
+    func changeBackground(fragil:Bool){
         
         var colorTop:CGColor
         
@@ -72,16 +64,18 @@ class VCDetalle: UIViewController {
             colorTop = UIColor(red: 180.0/255.0, green: 235.0/255.0, blue: 148.0/255.0, alpha: 1.0).CGColor
         }
         
-        
         let colorBottom = UIColor.whiteColor().CGColor
         
         let gl: CAGradientLayer = CAGradientLayer()
+        gl.locations = [0.0, 0.7]
         gl.colors = [colorTop, colorBottom]
-        gl.frame = backgroundFragil.bounds
-        //self.backgroundFragil.layer.i
+        gl.frame.size = self.view.frame.size
+        gl.frame = view.bounds
+        self.view.layer.insertSublayer(gl, atIndex: 0)
     }
     
     func getNombreMes(mes:Int) -> String{
+        
         switch mes {
         case 1:
             return "Enero"

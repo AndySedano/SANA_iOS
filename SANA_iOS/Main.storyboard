@@ -728,7 +728,6 @@
                                     </imageView>
                                 </subviews>
                                 <animations/>
-                                <color key="backgroundColor" red="0.44625784238775734" green="0.69515224358974359" blue="0.69352521741510853" alpha="0.20280172413793104" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="qPB-La-pJz" firstAttribute="top" secondItem="duq-5B-a1c" secondAttribute="bottom" constant="8" id="3p4-B5-qcz"/>
                                     <constraint firstItem="DqB-5F-50f" firstAttribute="centerX" secondItem="L4d-mc-Xe3" secondAttribute="centerX" id="D3W-A1-FVN"/>
