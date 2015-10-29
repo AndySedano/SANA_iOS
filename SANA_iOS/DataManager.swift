@@ -8,7 +8,7 @@
 
 import Foundation
 
-let DatosURL = "http://andysedano.com/json/datosSana.json"
+let DatosURL = "http://andysedano.com/json/sana.json"
 var appDefaults:Dictionary<String, AnyObject>?
 
 class DataManager{
@@ -48,8 +48,13 @@ class DataManager{
             let estatura = subJson["estatura"].double!
             let peso = subJson["peso"].double!
             let fragil = subJson["fragil"].bool!
+            let gs = subJson["tipoSangre"].string!
+            let telefono = subJson["telefono"].string!
+            let d = subJson["diaN"].int!
+            let m = subJson["mesN"].int!
+            let a = subJson["anioN"].int!
             
-            let p = Paciente(nombre: nombre,nombre2:nombre2, apellidoP: apellidoP, apellidoM: apellidoM, edad: edad, genero: genero, estatura: estatura, peso: peso, fragil:fragil)
+            let p = Paciente(nombre: nombre, nombre2:nombre2, apellidoP: apellidoP, apellidoM: apellidoM, edad: edad, genero: genero, estatura: estatura, peso:peso, gs:gs, telefono:telefono, dia:d, mes:m, año:a, fragil:fragil)
             
             if orden == 0{
                 if (datos[nombre.uppercaseString.characters.first!] != nil){

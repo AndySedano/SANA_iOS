@@ -9,7 +9,7 @@
 
 import UIKit
 
-class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdating {
+class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdating, UISearchBarDelegate {
     
 //    private let datos = [
 //        Paciente(nombres: "Juan", apellidoP: "Perez", apellidoM: "Alvarez", edad: 58, genero: "masculino", estatura: 1.7, peso: 86, fragil: false),
@@ -21,6 +21,7 @@ class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdati
     
     var datos = Dictionary<Character, Array<Paciente>>()
     private var datosFiltrados = Dictionary<Character, Array<Paciente>>()
+    private var mostrarDatosFiltrados = false
     var resultSearchController = UISearchController()
 
     override func viewDidLoad()
@@ -29,15 +30,7 @@ class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdati
         
         datos = DataManager.getDatosURL()
         
-        self.resultSearchController = UISearchController(searchResultsController: nil)
-        self.resultSearchController.searchResultsUpdater = self
-//        self.resultSearchController.searchBar.scopeButtonTitles = ["Fragil", "Sin Fragilidad"]
-        self.resultSearchController.dimsBackgroundDuringPresentation = false
-        self.resultSearchController.searchBar.sizeToFit()
-        
-        self.tableView.tableHeaderView = self.resultSearchController.searchBar
-        
-        self.navigationController!.setNavigationBarHidden(false, animated: true)
+        configureSearchController()
         
         self.tableView.reloadData()
         
@@ -53,6 +46,33 @@ class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdati
     
     // MARK: - Search Controller
     
+    func configureSearchController(){
+        
+        self.resultSearchController = UISearchController(searchResultsController: nil)
+        self.resultSearchController.searchResultsUpdater = self
+        self.resultSearchController.searchBar.placeholder = "Buscar"
+        self.resultSearchController.dimsBackgroundDuringPresentation = false
+        self.resultSearchController.searchBar.sizeToFit()
+        self.resultSearchController.searchBar.delegate = self
+        //self.resultSearchController.searchBar.sizeThatFits(<#T##size: CGSize##CGSize#>)
+        //self.resultSearchController.searchBar.scopeButtonTitles = ["Fragil", "Sin Fragilidad"]
+        
+        self.tableView.tableHeaderView = self.resultSearchController.searchBar
+        
+        self.navigationController!.setNavigationBarHidden(false, animated: true)
+        
+    }
+    
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        mostrarDatosFiltrados = true
+        self.tableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        mostrarDatosFiltrados = false
+        self.tableView.reloadData()
+    }
+    
     func updateSearchResultsForSearchController(searchController: UISearchController)
     {
         self.datosFiltrados.removeAll(keepCapacity: false)
@@ -66,14 +86,17 @@ class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdati
         }
         
         self.tableView.reloadData()
+        self.tableView.reloadSectionIndexTitles()
+        self.tableView.reloadInputViews()
+
     }
 
     // MARK: - Table view data source
     
     //Para ver cuantas secciones hay
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int
-    {
-        if (self.resultSearchController.active && self.resultSearchController.searchBar.text! != "")
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int{
+        
+        if mostrarDatosFiltrados && self.resultSearchController.searchBar.text != ""
         {
             return datosFiltrados.count
         } else {
@@ -81,29 +104,35 @@ class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdati
         }
     }
     
+    //Para el titulo de cada seccion
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if (self.resultSearchController.active && self.resultSearchController.searchBar.text! != "")
+        
+        if mostrarDatosFiltrados && self.resultSearchController.searchBar.text != ""
         {
-            return String(Array(datosFiltrados.keys.sort())[section])
+            return nil
+            //return String(Array(datosFiltrados.keys.sort())[section])
         } else {
             return String(Array(datos.keys.sort())[section])
         }
     }
     
-    //Para el titulo de cada seccion
+    //Para la barra lateral con todos los titulos
     override func sectionIndexTitlesForTableView(tableView: UITableView) -> [String]? {
-        if (self.resultSearchController.active && self.resultSearchController.searchBar.text! != "")
+        
+        if mostrarDatosFiltrados && self.resultSearchController.searchBar.text != ""
         {
-            return datosFiltrados.keys.sort().map({String($0)})
+            return nil
+            //return datosFiltrados.keys.sort().map({String($0)})
         } else {
             return datos.keys.sort().map({String($0)})
         }
+        
     }
     
     //Para el numero de elementos en cada seccion
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        if (self.resultSearchController.active && self.resultSearchController.searchBar.text! != "")
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        
+        if mostrarDatosFiltrados && self.resultSearchController.searchBar.text != ""
         {
             return (datosFiltrados[Array(datosFiltrados.keys.sort())[section]]?.count)!
         }
@@ -117,7 +146,7 @@ class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdati
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("PacienteCell", forIndexPath: indexPath) as! PacienteCell
         
-        if (self.resultSearchController.active && self.resultSearchController.searchBar.text! != "")
+        if mostrarDatosFiltrados && self.resultSearchController.searchBar.text != ""
         {
             if(DataManager.getPatientOrder() == 0){
                 cell.nombreLabel.text = datosFiltrados[Array(datos.keys.sort())[indexPath.section]]![indexPath.row].nombre
@@ -163,7 +192,13 @@ class ViewControllerListaPacientes: UITableViewController, UISearchResultsUpdati
         let destino = segue.destinationViewController as! VCDetalle
         let indice = self.tableView.indexPathForSelectedRow?.row
         let seccion = self.tableView.indexPathForSelectedRow?.section
-        destino.p = datos[Array(datos.keys.sort())[seccion!]]![indice!]
+        if mostrarDatosFiltrados
+        {
+             destino.p = datosFiltrados[Array(datosFiltrados.keys.sort())[seccion!]]![indice!]
+        } else {
+             destino.p = datos[Array(datos.keys.sort())[seccion!]]![indice!]
+        }
+       
     }
 
 }

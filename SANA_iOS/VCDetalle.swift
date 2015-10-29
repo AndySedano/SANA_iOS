@@ -27,20 +27,18 @@ class VCDetalle: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        foto.layer.cornerRadius = 25
-        foto.layer.masksToBounds = true
-        nombre.text=p.nombre + " " + p.apellidoP
-        edad.text=String(p.edad)
-        //genero.text=p.genero
-        //estatura.text=String(p.estatura)
-        //peso.text=String(p.peso)
+        
+        actualizarDatos()
+        
+        
         
         if(p.fragil){
             //fragilidad.text = "Fragil"
         }else{
             //fragilidad.text = "Sin fragilidad"
         }
-        changeBacground()
+        changePhoto()
+        changeBacground(p.fragil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,15 +46,61 @@ class VCDetalle: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func changeBacground(){
+    func actualizarDatos(){
+        self.nombre.text = p.nombre + " " + p.nombre2
+        self.apellidos.text = p.apellidoP + " " + p.apellidoM
+        self.fechaNacimiento.text = "\(p.diaNac) de \(getNombreMes(p.mesNac)) de \(p.añoNac)"
+        self.edad.text = String(p.edad)
+        self.peso.text = String(p.peso)
+        self.estatura.text = String(p.estatura)
+        self.telefono.text = p.telefono
+        self.grupoSanguineo.text = p.gs
+    }
+    
+    func changePhoto(){
+        self.foto.layer.cornerRadius = self.foto.frame.size.width / 2
+        self.foto.clipsToBounds = true
+    }
+    
+    func changeBacground(fragil:Bool){
         let colorTop = UIColor(red: 247.0/255.0, green: 136.0/255.0, blue: 136.0/255.0, alpha: 1.0).CGColor
         let colorBottom = UIColor.whiteColor().CGColor
         
         let gl: CAGradientLayer = CAGradientLayer()
         gl.colors = [colorTop, colorBottom]
-        //gl.colors = [UIColor.whiteColor().CGColor, UIColor.blackColor().CGColor]
         gl.frame = backgroundFragil.bounds
-        backgroundFragil.layer.insertSublayer(gl, atIndex:  0)
+        //backgroundFragil.layer.insertSublayer(gl, atIndex:  0)
+    }
+    
+    func getNombreMes(mes:Int) -> String{
+        switch mes {
+        case 1:
+            return "Enero"
+        case 2:
+            return "Febrero"
+        case 3:
+            return "Marzo"
+        case 4:
+            return "Abril"
+        case 5:
+            return "Mayo"
+        case 6:
+            return "Junio"
+        case 7:
+            return "Julio"
+        case 8:
+            return "Agosto"
+        case 9:
+            return "Septiembre"
+        case 10:
+            return "Octubre"
+        case 11:
+            return "Noviembre"
+        case 12:
+            return "Diciembre"
+        default:
+            return ""
+        }
     }
     
 

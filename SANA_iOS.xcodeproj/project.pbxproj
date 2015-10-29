@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		A14757D91BAA20B1003C502C /* VCDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14757D71BAA20B1003C502C /* VCDetalle.swift */; };
 		A14757DA1BAA20B1003C502C /* ViewControllerListaPacientes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */; };
-		E10870B81BDA99180001429B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10870B71BDA99180001429B /* SwiftyJSON.swift */; };
+		E1438B6E1BE19A8E006982EE /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1438B6D1BE19A8E006982EE /* SwiftyJSON.swift */; };
 		E197BA3A1BD9BBAA0014B124 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = E197BA391BD9BBAA0014B124 /* Settings.bundle */; };
 		E1AD6F291BAA625100D79D38 /* Paciente.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F281BAA625100D79D38 /* Paciente.swift */; };
 		E1AD6F2D1BAA80D600D79D38 /* PacienteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */; };
@@ -78,7 +78,7 @@
 /* Begin PBXFileReference section */
 		A14757D71BAA20B1003C502C /* VCDetalle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCDetalle.swift; sourceTree = "<group>"; };
 		A14757D81BAA20B1003C502C /* ViewControllerListaPacientes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerListaPacientes.swift; sourceTree = "<group>"; };
-		E10870B71BDA99180001429B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		E1438B6D1BE19A8E006982EE /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		E197BA391BD9BBAA0014B124 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = ../Settings.bundle; sourceTree = "<group>"; };
 		E1AD6F281BAA625100D79D38 /* Paciente.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paciente.swift; sourceTree = "<group>"; };
 		E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacienteCell.swift; sourceTree = "<group>"; };
@@ -196,7 +196,7 @@
 				E1DB0EAE1BDC20F700F8FF7E /* DataManager.swift */,
 				E1AD6F2C1BAA80D600D79D38 /* PacienteCell.swift */,
 				E1AD6F281BAA625100D79D38 /* Paciente.swift */,
-				E10870B71BDA99180001429B /* SwiftyJSON.swift */,
+				E1438B6D1BE19A8E006982EE /* SwiftyJSON.swift */,
 				E1AD6F2E1BAA977800D79D38 /* Controladores */,
 				E1EC28B41BAA1FE400E19AD6 /* Main.storyboard */,
 				E1EC28A51BAA1D5B00E19AD6 /* LaunchScreen.storyboard */,
@@ -357,8 +357,8 @@
 				E1AD6F301BAA980400D79D38 /* VCConfiguracion.swift in Sources */,
 				E1DB0EAF1BDC20F700F8FF7E /* DataManager.swift in Sources */,
 				E1EC289C1BAA1D5B00E19AD6 /* ViewController.swift in Sources */,
+				E1438B6E1BE19A8E006982EE /* SwiftyJSON.swift in Sources */,
 				A14757DA1BAA20B1003C502C /* ViewControllerListaPacientes.swift in Sources */,
-				E10870B81BDA99180001429B /* SwiftyJSON.swift in Sources */,
 				A14757D91BAA20B1003C502C /* VCDetalle.swift in Sources */,
 				E1EC289A1BAA1D5B00E19AD6 /* AppDelegate.swift in Sources */,
 				E1E813701BAB0FD9005C9B21 /* VCMenuInicial.swift in Sources */,
@@ -556,6 +556,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -568,6 +569,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "mx.itesm.SANA-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

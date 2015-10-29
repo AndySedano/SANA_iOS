@@ -18,9 +18,14 @@ class Paciente {
     var genero:String = ""
     var estatura:Double = 0
     var peso:Double = 0
+    var gs:String = ""
+    var telefono:String = ""
+    var diaNac:Int = 1
+    var mesNac:Int = 0
+    var añoNac:Int = 0
     var fragil:Bool = false
     
-    init(nombre: String, nombre2: String, apellidoP: String, apellidoM: String, edad: Int, genero:String, estatura:Double, peso:Double, fragil:Bool) {
+    init(nombre: String, nombre2: String, apellidoP: String, apellidoM: String, edad: Int, genero:String, estatura:Double, peso:Double, gs:String, telefono:String, dia:Int, mes:Int, año:Int, fragil:Bool) {
         self.nombre = nombre
         self.nombre2 = nombre2
         self.apellidoP = apellidoP
@@ -29,7 +34,13 @@ class Paciente {
         self.genero = genero
         self.estatura = estatura
         self.peso = peso
+        self.gs = gs
         self.fragil =  fragil
+        self.telefono = telefono
+        self.diaNac = dia
+        self.mesNac = mes
+        self.añoNac = año
+
     }
     
     init() {
@@ -42,5 +53,6 @@ class Paciente {
         self.estatura = 0
         self.peso = 0
         self.fragil = false
+        self.telefono = "telefono"
     }
 }
